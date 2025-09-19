@@ -1,54 +1,70 @@
-﻿namespace Lab1
+using System;
+namespace Lab1
 {
     public class Green
-    {
+    { 
         public bool Task1(double d)
         {
             bool answer = false;
 
-            // code here
-
-            // end
+            if (Math.Abs(d)>= 1)
+            {
+                answer = true;
+            }
 
             return answer;
         }
+        
         public bool Task2(double d, double f)
         {
             bool answer = false;
 
-            // code here
-
-            // end
+            if ((d+f)/2 > 0)
+            {
+                answer = true;
+            }
 
             return answer;
         }
+
         public bool Task3(int a, int b)
         {
             bool answer = false;
 
-            // code here
-
-            // end
+            if (a+b>(Math.Abs(a)+Math.Abs(b))/2)
+            {
+                answer = true;
+            }
 
             return answer;
         }
+  
         public int Task4(int a, int b, int c)
         {
-            int answer = 0;
+            int answer = c;
+            
 
-            // code here
-
-            // end
+            if (a >= b && a >= c)
+            {
+                answer = a;
+            }
+            if (b >= a && b >= c)
+            {
+                answer = b;
+            }
+            
 
             return answer;
         }
+        
         public double Task5(double x)
         {
             double answer = 0;
 
-            // code here
-
-            // end
+            if (Math.Abs(x) <= 1)
+            {
+                answer = Math.Pow(x,2)-1;
+            }
 
             return answer;
         }
@@ -56,9 +72,14 @@
         {
             bool answer = false;
 
-            // code here
-
-            // end
+             if (x < 0)
+            {
+                answer = (y > 0) && (y <= 1 + x) && (x >= -1);
+            }
+            else
+            {
+                answer = (y > 0) && (y <= 1 - x) && (x <= 1);
+            }
 
             return answer;
         }
@@ -67,9 +88,18 @@
         {
             bool answer = true;
 
-            // code here
-
-            // end
+            if (n<0)
+            {
+                answer = false;
+            }
+            else
+            {
+                if (n%2==0)
+                {
+                    answer = false ;
+                }
+                
+            }
 
             return answer;
         }
@@ -77,11 +107,8 @@
         {
             bool answer = false;
 
-            // code here
-
-            // end
-
             return answer;
         }
-    }
-}
+        static void Main()
+        {
+            Green green = new Green();

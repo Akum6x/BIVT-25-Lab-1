@@ -84,7 +84,8 @@ namespace Lab1
             bool answer = false;
 
             // code here
-            answer = Math.Abs(x * x + y * y + r * r) <= 1e-4;
+            if (Math.Abs(x * x + y * y + r * r) <= 1e-4)
+                answer = true;
             // end
 
             return answer;

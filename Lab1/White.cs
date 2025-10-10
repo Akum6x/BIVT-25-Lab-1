@@ -7,8 +7,10 @@ namespace Lab1
             bool answer = false;
 
             // code here
-            answer = d > 0;
-            Console.WriteLine(d);
+            if (d > 0)
+            {
+                answer = true;
+            }
             // end
 
             return answer;
@@ -18,7 +20,7 @@ namespace Lab1
             bool answer = false;
 
             // code here
-            if (n > 0)
+            if (n % 2 == 0)
             {
                 answer = true;
             }
@@ -102,7 +104,9 @@ namespace Lab1
                     answer = true;
                 }
                 else
+                {
                     return answer;
+                }
             }
             // end
 

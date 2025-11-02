@@ -24,9 +24,9 @@ namespace Lab1
             {
                 answer = true;
             }
-                // end
-            
-                return answer;
+            // end
+
+            return answer;
         }
         public int Task3(int a, int b)
         {
@@ -41,9 +41,9 @@ namespace Lab1
             {
                 answer = b;
             }
-                // end
+            // end
 
-                return answer;
+            return answer;
         }
         public double Task4(double d, double f)
         {
@@ -58,9 +58,9 @@ namespace Lab1
             {
                 answer = d;
             }
-                // end
+            // end
 
-                return answer;
+            return answer;
         }
         public double Task5(double x)
         {
@@ -75,17 +75,18 @@ namespace Lab1
             {
                 return x;
             }
-                // end
+            // end
 
-                return answer;
+            return answer;
         }
         public bool Task6(double x, double y, double r)
         {
             bool answer = false;
 
             // code here
-            if (Math.Abs(x * x + y * y + r * r) <= 1e-4)
-                answer = true;
+            double distanceSquared = x * x + y * y;
+            double difference = Math.Abs(distanceSquared - r * r);
+            answer = difference <= 0.0001;
             // end
 
             return answer;
@@ -97,7 +98,7 @@ namespace Lab1
 
             // code here
             int s = n * n;
-            
+
             if (s - n > 2 * n)
             {
                 if (n % 2 == 0)
@@ -118,10 +119,11 @@ namespace Lab1
             bool answer = false;
 
             // code here
-            if (L > 3 && T % 2 == 0 &&  M % 2 == 0)
-            {
-                answer = true;
-            }
+            bool timeCondition = (L / 10.0) <= 3.0;
+            bool landmarksCondition = (T + M) >= 5;
+            bool mountainsCondition = (M % 2) == 0;
+
+            answer = timeCondition && landmarksCondition && mountainsCondition;
             // end
 
             return answer;
